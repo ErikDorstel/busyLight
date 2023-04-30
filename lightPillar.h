@@ -41,8 +41,8 @@ void buttonChanged(uint8_t gpio,uint32_t duration) {
   if (duration>0 && overMax==false) {
     if (gpio==activeIn) { timerOne.timer+=defaultUnit; if (debug) { Serial.println("Timer: +" + String(defaultUnit/1000) + " seconds"); } return; }
     if (gpio==greenIn) { allOff(); digitalWrite(greenOut,HIGH); activeIn=gpio; timerOne.restart(); if (debug) { Serial.println("Green on"); } }
-    if (gpio==yellowIn) { allOff(); digitalWrite(yellowOut,HIGH);  activeIn=gpio; timerOne.restart(); if (debug) { Serial.println("Yellow on"); } }
-    if (gpio==redIn) { allOff(); digitalWrite(redOut,HIGH);  activeIn=gpio; timerOne.restart(); if (debug) { Serial.println("Red on"); } } }
+    if (gpio==yellowIn) { allOff(); digitalWrite(yellowOut,HIGH); activeIn=gpio; timerOne.restart(); if (debug) { Serial.println("Yellow on"); } }
+    if (gpio==redIn) { allOff(); digitalWrite(redOut,HIGH); activeIn=gpio; timerOne.restart(); if (debug) { Serial.println("Red on"); } } }
   overMax=false; }
 
 void initPillar() {
